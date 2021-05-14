@@ -5,11 +5,22 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "ngrok": "next dev & ngrok http 3000"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^1.0.12",
+    "@chakra-ui/react": "^1.6.0",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "framer-motion": "^4",
     "next": "10.2.0",
     "react": "17.0.2",
     "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.5",
+    "ngrok": "^4.0.1",
+    "typescript": "^4.2.4"
   }
 }
