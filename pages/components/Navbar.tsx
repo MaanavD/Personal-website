@@ -32,7 +32,11 @@ import Image from "next/image";
 export default function Navbar() {
 	const { isOpen, onToggle } = useDisclosure();
 	const { colorMode, toggleColorMode } = useColorMode();
-
+	const router = useRouter();
+	const handleClick = (e) => {
+		e.preventDefault();
+		router.push(`/`);
+	};
 	const Links = ["Projects", "Skills", "Awards"];
 	return (
 		<Box>
@@ -56,9 +60,8 @@ export default function Navbar() {
 				>
 					<IconButton
 						onClick={onToggle}
-						borderRadius="0"
 						icon={
-							isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={4} h={4} />
+							isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
 						}
 						variant={"ghost"}
 						aria-label={"Toggle Navigation"}
@@ -76,22 +79,26 @@ export default function Navbar() {
 					</HStack>
 				</Flex>
 
-				<Flex flex={{ base: 1 }} flexBasis={"100"} justify={"space-evenly"}>
+				<Flex flex={{ base: 1 }} flexBasis={"100"} justify={"space-evenly"} >
 					<Link
 						_hover={{
 							textDecoration: "none",
 							bg: useColorModeValue("gray.200", "gray.700"),
 						}}
-						href={"/#"}
+						onClick={handleClick}
+						borderRadius="8px"
+						padding={'4px'}
 					>
 
-						<Center d={["flex", "none", "flex"]} fontSize="xl" >
+						<Center d={["none", "none", "flex"]} fontSize="xl"
+						>
 							&nbsp; Maanav &nbsp;
 							<Image
+								// TODO: Replace png -> SVG
 								src={colorMode === 'dark' ? "/../public/Logo.png" : "/../public/BLogo.png"}
 								alt="temp"
-								width="50rem"
-								height="50rem"
+								width="40rem"
+								height="40rem"
 							/>
 							&nbsp; Dalal &nbsp;&nbsp;
 						</Center>
@@ -99,8 +106,8 @@ export default function Navbar() {
 							<Image
 								src={colorMode === 'dark' ? "/../public/Logo.png" : "/../public/BLogo.png"}
 								alt="temp"
-								width="50rem"
-								height="50rem"
+								width="40rem"
+								height="40rem"
 							/>
 						</Box>
 					</Link>
@@ -118,7 +125,6 @@ export default function Navbar() {
 						}
 						variant={"ghost"}
 						aria-label={"Toggle Navigation"}
-						borderRadius="0"
 					/>
 				</Flex>
 			</Flex>
@@ -143,7 +149,6 @@ const DesktopNav = ({ children }) => {
 	const router = useRouter();
 	const handleClick = (e) => {
 		e.preventDefault();
-		console.log(children);
 		router.push(`/${children}`);
 	};
 	return (
@@ -153,6 +158,7 @@ const DesktopNav = ({ children }) => {
 				bg: useColorModeValue("gray.200", "gray.700"),
 			}}
 			onClick={handleClick}
+			borderRadius="8px"
 		>
 			<Text fontWeight={600} color={useColorModeValue("gray.600", "gray.200")}>
 				{children}
@@ -179,7 +185,9 @@ const MobileNav = ({ children }) => {
 				align={"center"}
 				_hover={{
 					textDecoration: "none",
+					bg: useColorModeValue("gray.200", "gray.700"),
 				}}
+				borderRadius="8px"
 			>
 				<Text
 					fontWeight={600}
