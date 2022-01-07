@@ -3,7 +3,7 @@ const config = {
 	initialColorMode: "light",
 	useSystemColorMode: true,
 	shadows: {
-		outline: "#47c7c1",
+		outline: "#3182CE",
 	},
 };
 const theme = extendTheme({ config });

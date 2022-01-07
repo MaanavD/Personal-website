@@ -37,9 +37,9 @@ export default function Navbar() {
 		e.preventDefault();
 		router.push(`/`);
 	};
-	const Links = ["Projects", "Skills", "Awards"];
+	const Links = ["Blog", "Resume", "Contact"];
 	return (
-		<Box>
+		<Box style={{ position: 'sticky', top: '0', zIndex: 100 }}>
 			<Flex
 				bg={useColorModeValue("white", "gray.800")}
 				color={useColorModeValue("gray.600", "white")}
@@ -49,7 +49,7 @@ export default function Navbar() {
 				borderBottom={1}
 				flexBasis={"100"}
 				borderStyle={"solid"}
-				borderColor={useColorModeValue("gray.200", "gray.900")}
+				borderColor={"fff"}
 				align={"center"}
 			>
 				<Flex

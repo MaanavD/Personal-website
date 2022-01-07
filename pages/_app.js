@@ -16,7 +16,7 @@ Router.events.on("routeChangeError", () => NProgress.done());
 
 function MyApp({ Component, pageProps }) {
 	return (
-		<ChakraProvider theme={theme}>
+		<ChakraProvider theme={theme} >
 			<Head>
 				<link rel="stylesheet" type="text/css" href="/nprogress.css" />
 
@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps }) {
 					content="Software Engineering student at McMaster University focused on growth opportunities and improving my skills in full stack development.  UX / UI Freelancer."
 				/>
 				<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-				<meta name="theme-color" content="#00D1B2" />
+				<meta name="theme-color" content="#3182CE" />
 				<meta name="theme-color" content="#ffffff" />
 				<meta charset="UTF-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
