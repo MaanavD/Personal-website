@@ -1,6 +1,7 @@
 import Head from "next/head";
-import { Container, Flex, Box, Stack, Button, ButtonGroup, Heading, chakra } from "@chakra-ui/react";
-import { CalendarIcon, ChatIcon } from '@chakra-ui/icons'
+import NextLink from "next/link"
+import { Container, Flex, Box, Stack, Button, Link, ButtonGroup, Heading, chakra, Center } from "@chakra-ui/react";
+import { CalendarIcon, EditIcon } from '@chakra-ui/icons'
 import styles from "../styles/Home.module.css";
 import NextImage from 'next/image'
 import React from "react";
@@ -47,24 +48,46 @@ export default function Home() {
 						textAlign={["center", "center", "left", "left"]}
 					>
 						This website is my little corner of the internet - I'm glad you've found it.
-							<br />
 						<br />
-							If you'd like to chat, feel free to grab some of my time:
-						</Heading>
+						<br />
+						If you'd like to learn more about me, feel free to:
+					</Heading>
 					<ButtonGroup>
-						<Button
-							leftIcon={<CalendarIcon />}
-							py="4"
-							px="4"
-							size="md"
-							colorScheme="blue"
-						>
-							Schedule a chat
+
+						<a target="_blank" href="https://calendly.com/maanavdalal/45min" rel="noopener noreferrer">
+							<Button
+								leftIcon={<CalendarIcon />}
+								py="4"
+								px="4"
+								size="md"
+								colorScheme="messenger"
+							>
+								Schedule a chat
 							</Button>
+						</a>
+						<NextLink href="/blog/">
+							<Button
+								leftIcon={<EditIcon />}
+								py="4"
+								px="4"
+								size="md"
+								colorScheme="twitter"
+							>
+								Read my blog
+							</Button>
+						</NextLink>
+
 					</ButtonGroup>
 				</Stack>
 				<Box mb={{ base: 12, md: 0 }} w={{ base: "80%", sm: "60%", md: "50%" }} >
 					<Image src={"https://source.unsplash.com/collection/404339/800x600"} width="800px" height="600px" rounded="1rem" />
+					<Center>
+						<Heading as="h2"
+							size="md"
+							color="primary.800"
+							lineHeight={1.5}>Article Title
+						</Heading>
+					</Center>
 				</Box>
 			</Flex>
 			<ModDivider />

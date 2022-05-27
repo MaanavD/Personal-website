@@ -9,7 +9,7 @@ const Image = chakra(NextImage, {
 export default function Projects() {
     return (
         <>
-            <Text href="#Projects" fontSize="3xl" align='center'>Projects</Text>
+            <Text fontSize="3xl" align='center'>Projects</Text>
             <Text align='center'>My favourite creations over the years. See more on <Link color={useColorModeValue("blue.500", "blue.200")} href='https://github.com/MaanavD' isExternal> Github</Link>.</Text>
             <br/>
             <Flex flexDirection={['column', 'column', 'column', 'row']} align='center'>

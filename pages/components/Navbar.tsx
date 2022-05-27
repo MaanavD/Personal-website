@@ -90,22 +90,22 @@ export default function Navbar() {
 						padding={'4px'}
 					>
 
-						<Center d={["none", "none", "flex"]} fontSize="xl"
+						<Center display={["none", "none", "flex"]} fontSize="xl"
 						>
 							&nbsp; Maanav &nbsp;
 							<Image
 								// TODO: Replace png -> SVG
-								src={colorMode === 'dark' ? "/../public/Logo.png" : "/../public/BLogo.png"}
-								alt="temp"
+								src={colorMode === 'dark' ? "/Logo.png" : "/BLogo.png"}
+								alt="Maanav Dalal logo"
 								width="40rem"
 								height="40rem"
 							/>
 							&nbsp; Dalal &nbsp;&nbsp;
 						</Center>
-						<Box d={["flex", "flex", "none"]}>
+						<Box display={["flex", "flex", "none"]}>
 							<Image
-								src={colorMode === 'dark' ? "/../public/Logo.png" : "/../public/BLogo.png"}
-								alt="temp"
+								src={colorMode === 'dark' ? "/Logo.png" : "/BLogo.png"}
+								alt="Colour mode logo"
 								width="40rem"
 								height="40rem"
 							/>

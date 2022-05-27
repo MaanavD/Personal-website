@@ -1,7 +1,6 @@
 import React from 'react'
 import { Center, Text, List, ListItem, ListIcon, useColorModeValue } from '@chakra-ui/react'
 import { GoChevronRight } from "react-icons/go"
-import styles from "../styles/resume.css"
 
 let sections = ['Education', 'Skills', 'Experience', 'Projects']
 let sectionContent = [{}, {}, {}, {}]
