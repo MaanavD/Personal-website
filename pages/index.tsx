@@ -14,7 +14,7 @@ import ModDivider from "./components/ModDivider";
 const Image = chakra(NextImage, {
 	shouldForwardProp: (prop) => ['width', 'height', 'src', 'alt'].includes(prop)
 })
-// TODO: Scrollbar doesnt push content aside or is inline with resume page.
+// TODO: Scrollbar doesnt push content aside or inline with resume page.
 export default function Home() {
 	return (
 		<Container maxW="container.xl" padding="10">
