@@ -13,7 +13,7 @@ const Footer = () => {
         <Spacer />
         <Box >
             <Text marginTop={[3, 0, 0, 0]}>
-                Have any questions? Let's talk at: <Link href='mailto:maanavdalal@gmail.com' isExternal>MaanavDalal@gmail.com</Link>.
+                {"Have any questions? Let's talk at: "}<Link href="mailto:maanavdalal@gmail.com" isExternal>MaanavDalal@gmail.com</Link>.
             </Text>
         </Box>
         </Grid>

@@ -1,11 +1,6 @@
 import React from 'react'
-import { Text, Badge, Flex, Box, Stack, Button, ButtonGroup, Heading, chakra, HStack, Container, Grid } from "@chakra-ui/react";
-import NextImage from 'next/image'
+import { Text, Button, Container, Grid } from "@chakra-ui/react";
 import { FaEnvelope, FaGithub, FaInstagram, FaLinkedinIn, FaSpotify } from 'react-icons/fa';
-
-const Image = chakra(NextImage, {
-    shouldForwardProp: (prop) => ['width', 'height', 'src', 'alt'].includes(prop)
-})
 
 export default function Projects() {
     return (

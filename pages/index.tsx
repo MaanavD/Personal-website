@@ -47,10 +47,10 @@ export default function Home() {
 						lineHeight={1.5}
 						textAlign={["center", "center", "left", "left"]}
 					>
-						This website is my little corner of the internet - I'm glad you've found it.
+						{"This website is my little corner of the internet - I'm glad you've found it."}
 						<br />
 						<br />
-						If you'd like to learn more about me, feel free to:
+						{"If you'd like to learn more about me, feel free to:"}
 					</Heading>
 					<ButtonGroup>
 

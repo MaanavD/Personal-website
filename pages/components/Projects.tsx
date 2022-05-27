@@ -18,9 +18,9 @@ export default function Projects() {
                     <Image maxW="sm" justifySelf='auto' objectFit='cover' src={"https://source.unsplash.com/collection/404339/800x600"} width="400px" height="400px" />
                     <Text fontSize="xl" >inFlightful</Text>
                     <Stack direction='row'>
-                        {["JavaScript", "Firebase", "Chart.js"].map((item) => {
-                            return <Badge fontSize="0.8em" colorScheme='yellow'>{item}</Badge>
-                        })}
+                        <Badge fontSize="0.8em" colorScheme='yellow'>JavaScript</Badge>
+                        <Badge fontSize="0.8em" colorScheme='yellow'>Firebase</Badge>
+                        <Badge fontSize="0.8em" colorScheme='yellow'>Chart.js</Badge>
                     </Stack>
                     <br />
                     <Text fontSize=" md">UI Dashboard for airlines to discover realtime customer sentiments. Scrapes Twitter for tweets, performs NLP, and displays them via Chart.js.</Text>
@@ -36,7 +36,7 @@ export default function Projects() {
                         <Badge fontSize="0.8em" colorScheme='pink'>Figma</Badge>
                     </Stack>
                     <br />
-                    <Text fontSize=" md">This project's goal was to help teens better access jobs, and did so by using the indeed API to deliver entry-level jobs to users via an Android App.</Text>
+                    <Text fontSize=" md">{"This project's goal was to help teens better access jobs, and did so by using the indeed API to deliver entry-level jobs to users via an Android App."}</Text>
                 </Box>
                 <Spacer />
                 <Box maxW='sm' marginBottom={['2em', '2em', 0]}>
