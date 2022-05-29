@@ -21,7 +21,7 @@ export default function Blog({ posts }) {
                 const { title, summary, date, bannerImage, tags } = frontmatter
 
                 //JSX for individual blog listing
-                return <Link href={`/posts/${slug}`}><article key={title}>
+                return <Link key={title} href={`/posts/${slug}`}><article key={title}>
                     <Stack spacing={useBreakpointValue({ base: '4', md: '5' })}>
 
                         <Box position="relative">
@@ -45,7 +45,7 @@ export default function Blog({ posts }) {
                             </Text>
                             <Stack direction='row'>
                                 {tags.map((tag) =>
-                                    <Badge variant='outline' colorScheme='gray'>
+                                    <Badge key={tag} variant='outline' colorScheme='gray'>
                                         {tag}
                                     </Badge>)
                                 }
