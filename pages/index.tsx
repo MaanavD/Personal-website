@@ -1,6 +1,6 @@
 import Head from "next/head";
 import NextLink from "next/link"
-import { Container, Flex, Box, Stack, Button, Link, ButtonGroup, Heading, chakra, Center, VStack } from "@chakra-ui/react";
+import { Container, Flex, Box, Stack, Button, Link, ButtonGroup, Heading, chakra, Center, VStack, useColorModeValue } from "@chakra-ui/react";
 import { CalendarIcon, EditIcon } from '@chakra-ui/icons'
 import styles from "../styles/Home.module.css";
 import NextImage from 'next/image'
@@ -65,7 +65,7 @@ export default function Home({ posts }) {
 								py="4"
 								px="4"
 								size="md"
-								colorScheme="messenger"
+								colorScheme={"twitter"}
 							>
 								Schedule a chat
 							</Button>
@@ -76,7 +76,7 @@ export default function Home({ posts }) {
 								py="4"
 								px="4"
 								size="md"
-								colorScheme="twitter"
+								color={useColorModeValue("blue.500", "blue.200")}
 							>
 								Read my blog
 							</Button>

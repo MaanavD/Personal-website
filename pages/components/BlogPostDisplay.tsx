@@ -40,14 +40,14 @@ export default function BlogPostDisplay(props: blogProp) {
                 bg={useColorModeValue("gray.100", "gray.700")}
                 maxW="2xl"
             >
-                <Image
+                {props.bannerImage && <Image
                     roundedTop="lg"
                     w="full"
                     h={64}
                     fit="cover"
                     src={props.bannerImage}
                     alt={props.imageAlt}
-                />
+                />}
 
                 <Box p={6}>
                     <Box>

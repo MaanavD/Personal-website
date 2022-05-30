@@ -2,7 +2,7 @@ import { Box, useColorModeValue, Flex, chakra, Badge } from '@chakra-ui/react'
 import React from 'react'
 
 const Achievement = (props) => {
-    const { title, type, organization, body } = props
+    const { title, date, organization, body } = props
     return (
         <Box
             w="full"
@@ -21,13 +21,13 @@ const Achievement = (props) => {
                 </chakra.span>
                 <Badge
                     variant='outline'
-                    colorScheme='yellow'
+                    colorScheme='blue'
                     px={2}
                     py={1}
                     textTransform="uppercase"
                     fontSize="xs"
                 >
-                    {type}
+                    {date}
                 </Badge>
             </Flex>
 
