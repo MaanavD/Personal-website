@@ -1,6 +1,7 @@
 import React from 'react'
-import { Text, useColorModeValue, Link, Grid } from "@chakra-ui/react";
+import { Text, useColorModeValue, Link, Grid, transition } from "@chakra-ui/react";
 import Achievement from './Achievement';
+import { AnimatePresence, motion } from 'framer-motion';
 const Achievements = () => {
     const awards = [
         {
@@ -81,19 +82,32 @@ const Achievements = () => {
             organization: "Collegiate DECA McMaster",
             body: "I completed my DECA journey as a chapter president for collegiate DECA McMaster, hosting a regional event and taking a chapter of 50 delegates to the provincial competition."
         },
-        
+
     ]
 
-    const sortedAwards = awards.sort((a,b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    const sortedAwards = awards.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
     return (
         <>
             <Text fontSize="3xl" align='center'>Achievements & Awards</Text>
             <Text align='center'>{"Heres where anything I'm proud of goes. See more on "}<Link target="_blank" rel="noopener noreferrer" color={useColorModeValue("blue.500", "blue.200")} href="https://www.linkedin.com/in/maanavdalal"> LinkedIn</Link>.</Text>
             <br />
             <Grid gap={6} templateColumns={['repeat(1, 1fr)', 'repeat(2, 1fr)', 'repeat(4, 1fr)']}>
-                {sortedAwards.map(award => {
-                    return <Achievement key={award.title}   title={award.organization} date={award.date} organization={award.title} body={award.body} />
-                })}
+                <AnimatePresence>
+                    {sortedAwards.map((award, i) => {
+                        const transition = {
+                            ease: "easeIn",
+                            duration: i * 0.15
+                        }
+                        return (<motion.article key={award.title}
+                            initial={{ y: 10, opacity: 0 }}
+                            transition={transition}
+                            whileInView={{ y: 0, opacity: 1 }}
+                            viewport={{ once: true }}>
+                            <Achievement key={award.title} title={award.organization} date={award.date} organization={award.title} body={award.body} />
+                        </motion.article>)
+                    })}
+                </AnimatePresence>
             </Grid>
         </>
     )
