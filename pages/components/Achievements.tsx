@@ -18,7 +18,7 @@ const Achievements = () => {
             <br />
             <Grid gap={6} templateColumns={['repeat(1, 1fr)', 'repeat(2, 1fr)', 'repeat(4, 1fr)']}>
                 {awards.map(award => {
-                    return <Achievement title={award.title} type={award.type} organization={award.organization} body={award.body} />
+                    return <Achievement key={award.title} title={award.title} type={award.type} organization={award.organization} body={award.body} />
                 })}
             </Grid>
         </>
