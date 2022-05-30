@@ -100,7 +100,7 @@ export default function Navbar() {
 								width="40rem"
 								height="40rem"
 							/>
-							&nbsp; Dalal &nbsp;&nbsp;
+							&nbsp; Dalal &nbsp;
 						</Center>
 						<Box display={["flex", "flex", "none"]}>
 							<Image

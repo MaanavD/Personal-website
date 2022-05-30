@@ -1,26 +1,35 @@
 import fs from "fs";
 import matter from "gray-matter";
-import md from 'markdown-it';
-import {Image} from '@chakra-ui/react'
+import { Container, Heading, Image, chakra, Stack, Badge, Divider } from '@chakra-ui/react'
+import ReactMarkdown from 'react-markdown'
+import ChakraUIRenderer from 'chakra-ui-markdown-renderer';
+import { format } from 'date-fns'
 
 // The page for each post
-export default function Post({frontmatter, content}) {
+export default function Post({ frontmatter, content }) {
 
-    const {title, author, category, date, bannerImage, tags} = frontmatter
-
-    return <main>
-        <Image src={bannerImage}/>
-        <h1>{title}</h1>
-        <h2>{author} || {date}</h2>
-        <h3>{category} || {tags.join()}</h3>
-        <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
-    </main>
+  const { title, summary, date, bannerImage, imageAlt, tags } = frontmatter
+  const processedDate = format(new Date(date), "MMMM do, yyyy",)
+  return <Container maxW="container.md" padding="10">
+    <Image src={bannerImage} alt={imageAlt} />
+    <Stack direction='row' py={2}>
+      {tags?.map((tag) =>
+        <Badge key={tag} variant='outline' colorScheme={"blue"}>
+          {tag}
+        </Badge>)
+      }
+    </Stack>
+    <Heading as="h1" size="xl">{title}</Heading>
+    <chakra.p>{processedDate}</chakra.p>
+    <Divider my={5}/>
+    <ReactMarkdown components={ChakraUIRenderer()}>{content}</ReactMarkdown>
+  </Container>
 }
 
 // Generating the paths for each post
 export async function getStaticPaths() {
   // Get list of all files from our posts directory
-  const files = fs.readdirSync("posts");
+  const files = fs.readdirSync("public/posts");
   // Generate a path for each one
   const paths = files.map((fileName) => ({
     params: {
@@ -37,12 +46,12 @@ export async function getStaticPaths() {
 
 // Generate the static props for the page
 export async function getStaticProps({ params: { slug } }) {
-    const fileName = fs.readFileSync(`posts/${slug}.md`, 'utf-8');
-    const { data: frontmatter, content } = matter(fileName);
-    return {
-      props: {
-        frontmatter,
-        content,
-      },
-    };
-  }
+  const fileName = fs.readFileSync(`public/posts/${slug}.md`, 'utf-8');
+  const { data: frontmatter, content } = matter(fileName);
+  return {
+    props: {
+      frontmatter,
+      content,
+    },
+  };
+}

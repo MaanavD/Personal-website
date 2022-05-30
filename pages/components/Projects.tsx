@@ -15,7 +15,7 @@ export default function Projects() {
             <br />
             <Flex flexDirection={['column', 'column', 'column', 'row']} align='center'>
                 <Box maxW='sm' marginBottom={['2em', '2em', 0]}>
-                    <Image maxW="sm" justifySelf='auto' objectFit='cover' src={"https://source.unsplash.com/collection/404339/800x600"} width="400px" height="400px" />
+                    <Image rounded="lg" maxW="sm" justifySelf='auto' objectFit='cover' src={"https://source.unsplash.com/collection/404339/800x600"} width="400px" height="400px" />
                     <Text fontSize="xl" >inFlightful</Text>
                     <Stack direction='row'>
                         <Badge fontSize="0.8em" colorScheme='yellow'>JavaScript</Badge>
@@ -27,7 +27,7 @@ export default function Projects() {
                 </Box>
                 <Spacer />
                 <Box maxW='sm' marginBottom={['2em', '2em', 0]}>
-                    <Image justifySelf='auto' objectFit='cover' src={"https://source.unsplash.com/collection/404339/800x600"} width="400px" height="400px" />
+                    <Image rounded="lg" justifySelf='auto' objectFit='cover' src={"https://source.unsplash.com/collection/404339/800x600"} width="400px" height="400px" />
                     <Text fontSize="xl" >Employmint</Text>
                     <Stack direction='row'>
                         <Badge colorScheme='yellow' variant='outline'><FaTrophy style={{ marginTop: '3px' }} /></Badge>
@@ -40,7 +40,7 @@ export default function Projects() {
                 </Box>
                 <Spacer />
                 <Box maxW='sm' marginBottom={['2em', '2em', 0]}>
-                    <Image justifySelf='auto' objectFit='cover' src={"https://source.unsplash.com/collection/404339/800x600"} width="400px" height="400px" />
+                    <Image rounded="lg" justifySelf='auto' objectFit='cover' src={"https://source.unsplash.com/collection/404339/800x600"} width="400px" height="400px" />
                     <Text fontSize="xl" >MicroScan</Text>
                     <Stack direction='row'>
                         <Badge colorScheme='yellow' variant='outline'><FaTrophy style={{ marginTop: '3px' }} /></Badge>

@@ -12,12 +12,12 @@ import BlogPostDisplay from './components/BlogPostDisplay'
 // The Blog Page Content
 export default function Blog({ posts }) {
     return <Container maxW="80%" paddingY="2em">
-        <Grid templateColumns='repeat(3, 1fr)' gap={6}>
+        <Grid templateColumns={['repeat(1, 1fr)', 'repeat(1, 1fr)','repeat(2, 1fr)','repeat(3, 1fr)']} gap={6}>
             {posts.map(post => {
                 //extract slug and frontmatter
                 const { slug, frontmatter } = post
                 //extract frontmatter properties
-                const { title, summary, date, bannerImage, tags } = frontmatter
+                const { title, summary, date, bannerImage, imageAlt, tags } = frontmatter
                 //JSX for individual blog listing
                 return <Link key={title} href={`/posts/${slug}`}>
                     <article key={title}>
@@ -26,6 +26,7 @@ export default function Blog({ posts }) {
                         summary={summary}
                         date={date}
                         bannerImage={bannerImage}
+                        imageAlt={imageAlt}
                         tags={tags}
                        />
                     </article>
@@ -39,12 +40,12 @@ export default function Blog({ posts }) {
 //Generating the Static Props for the Blog Page
 export async function getStaticProps() {
     // get list of files from the posts folder
-    const files = fs.readdirSync('posts');
+    const files = fs.readdirSync('public/posts');
 
     // get frontmatter & slug from each post
     const posts = files.map((fileName) => {
         const slug = fileName.replace('.md', '');
-        const readFile = fs.readFileSync(`posts/${fileName}`, 'utf-8');
+        const readFile = fs.readFileSync(`public/posts/${fileName}`, 'utf-8');
         const { data: frontmatter } = matter(readFile);
 
         return {

@@ -1,14 +1,17 @@
 import React from 'react'
-import { Text, Button, Container, Grid } from "@chakra-ui/react";
+import { Text, Button, Container, Grid, HStack } from "@chakra-ui/react";
 import { FaEnvelope, FaGithub, FaInstagram, FaLinkedinIn, FaSpotify } from 'react-icons/fa';
+import Profile from './components/Profile';
 
 export default function Projects() {
+    //TODO: Figure out 'divider'
     return (
-        <>
-            <br />
-            <Text fontSize="3xl" align='center'>Connect with me at:</Text>
-            <br />
+        <Grid p={20} templateColumns={['repeat(1, 1fr)', 'repeat(1, 1fr)', 'repeat(2, 1fr)']}> 
+            <Profile />
             <Container maxW="container.sm" padding="10">
+                <br />
+                <Text fontSize="3xl" align='center'>Connect with me through:</Text>
+                <br />
                 <Grid gap={6} templateColumns='auto' >
 
                     <a target="_blank" href="https://github.com/MaanavD/" rel="noopener noreferrer">
@@ -38,6 +41,6 @@ export default function Projects() {
                     </a>
                 </Grid>
             </Container>
-        </>
+        </Grid>
     )
 }

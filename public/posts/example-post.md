@@ -2,8 +2,9 @@
 title: "This is an example post"
 author: "Alex Merced"
 category: "example"
-date: "2022-03-13"
+date: "05/27/2022"
 bannerImage: "/images/temp.jpg"
+imageAlt: "Example"
 tags:
     - example
     - ex1
