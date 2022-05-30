@@ -12,6 +12,7 @@ import Footer from './components/Footer'
 import ModDivider from "./components/ModDivider";
 import fs from 'fs';
 import matter from 'gray-matter';
+import { motion } from "framer-motion";
 
 const Image = chakra(NextImage, {
 	shouldForwardProp: (prop) => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -84,24 +85,32 @@ export default function Home({ posts }) {
 					</ButtonGroup>
 				</Stack>
 				<Box mt={{ base: 50, md: 0 }} mb={{ base: 12, md: 0 }} w={{ base: "80%", sm: "60%", md: "50%" }} >
-					<Image src={bannerImage} alt={imageAlt} width="800px" height="600px" rounded="xl" />
-					<VStack spacing={-1}>
+					<motion.div
+						initial={{ y: 10, opacity: 0 }}
+						transition={{ ease: "easeIn", duration: 0.8 }}
+						whileInView={{ y: 0, opacity: 1 }}
+						viewport={{ once: true }}>
 						<Link href={`/posts/${slug}`}>
-							<Heading as="h2"
-								size="md"
-								color="primary.800"
-								lineHeight={1.5}>{title}
-							</Heading>
+							<Image src={bannerImage} alt={imageAlt} width="800px" height="600px" rounded="xl" />
 						</Link>
-						<chakra.p
-							color="primary.800"
-							opacity="0.8"
-							fontWeight="normal"
-							textAlign={["center", "center", "left", "left"]}
-						>
-							{"My latest article, posted:"} {date}
-						</chakra.p>
-					</VStack>
+						<VStack spacing={-1}>
+							<Link href={`/posts/${slug}`}>
+								<Heading as="h2"
+									size="md"
+									color="primary.800"
+									lineHeight={1.5}>{title}
+								</Heading>
+							</Link>
+							<chakra.p
+								color="primary.800"
+								opacity="0.8"
+								fontWeight="normal"
+								textAlign={["center", "center", "left", "left"]}
+							>
+								{"My latest article, posted:"} {date}
+							</chakra.p>
+						</VStack>
+					</motion.div>
 				</Box>
 			</Flex>
 			<ModDivider />

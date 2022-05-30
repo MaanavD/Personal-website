@@ -29,7 +29,7 @@ interface blogProp {
 export default function BlogPostDisplay(props: blogProp) {
     return (
         <Flex
-            p={5}
+        p={[1, 1, 5]}
             w="full"
             alignItems="center"
             justifyContent="center"

@@ -4,6 +4,7 @@ import { Container, Heading, Image, chakra, Stack, Badge, Divider } from '@chakr
 import ReactMarkdown from 'react-markdown'
 import ChakraUIRenderer from 'chakra-ui-markdown-renderer';
 import { format } from 'date-fns'
+import Footer from "../components/Footer";
 
 // The page for each post
 export default function Post({ frontmatter, content }) {
@@ -21,7 +22,7 @@ export default function Post({ frontmatter, content }) {
     </Stack>
     <Heading as="h1" size="xl">{title}</Heading>
     <chakra.p>{processedDate}</chakra.p>
-    <Divider my={5}/>
+    <Divider my={5} />
     <ReactMarkdown components={ChakraUIRenderer()}>{content}</ReactMarkdown>
   </Container>
 }
