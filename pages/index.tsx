@@ -59,7 +59,6 @@ export default function Home({ posts }) {
 						{"If you'd like to learn more about me, feel free to:"}
 					</chakra.p>
 					<ButtonGroup>
-
 						<a target="_blank" href="https://calendly.com/maanavdalal/45min" rel="noopener noreferrer">
 							<Button
 								leftIcon={<CalendarIcon />}
@@ -92,8 +91,8 @@ export default function Home({ posts }) {
 						whileInView={{ y: 0, opacity: 1 }}
 						viewport={{ once: true }}>
 						<Link href={`/posts/${slug}`}>
-							{bannerImage ? <Image src={bannerImage} alt={imageAlt} width="800px" height="600px" rounded="xl" /> : 
-								<Image src={placeholder} alt={imageAlt} width="1500px" height="1000px" rounded="xl" />
+							{bannerImage ? <Image src={bannerImage} alt={imageAlt == "" ? "Blog post image" : imageAlt} width="800px" height="600px" rounded="xl" /> : 
+								<Image src={placeholder} alt={imageAlt == "" ? "Blog post image" : imageAlt} width="1500px" height="1000px" rounded="xl" />
 							}
 						</Link>
 						<VStack spacing={-1}>

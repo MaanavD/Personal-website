@@ -67,7 +67,7 @@ export default function Navbar() {
 				>
 					<HStack as={"nav"} spacing={4} display={{ base: "none", md: "flex" }}>
 						{Links.map((link) => (
-							<DesktopNav key={link}>{link}</DesktopNav>
+							<DesktopNav href={`/${link}`} key={link}>{link}</DesktopNav>
 						))}
 					</HStack>
 				</Flex>
@@ -79,6 +79,7 @@ export default function Navbar() {
 							bg: useColorModeValue("gray.200", "gray.700"),
 						}}
 						onClick={handleClick}
+						href="/"
 						borderRadius="8px"
 						padding={'4px'}
 					>
@@ -129,7 +130,7 @@ export default function Navbar() {
 					borderColor={useColorModeValue("gray.200", "gray.900")}
 				>
 					{Links.map((link) => (
-						<MobileNav key={link}>{link}</MobileNav>
+						<MobileNav href={`/${link}`} key={link}>{link}</MobileNav>
 					))}
 				</Stack>
 			</Collapse>
