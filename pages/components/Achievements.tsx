@@ -99,7 +99,7 @@ const Achievements = () => {
                             ease: "easeIn",
                             duration: i > 10 ? 1.5 : i * 0.15
                         }
-                        return (<motion.article key={award.title}
+                        return (<motion.article key={award.title + award.organization}
                             initial={{ y: 10, opacity: 0 }}
                             transition={transition}
                             whileInView={{ y: 0, opacity: 1 }}

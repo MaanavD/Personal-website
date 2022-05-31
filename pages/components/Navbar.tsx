@@ -39,7 +39,7 @@ export default function Navbar() {
 	};
 	const Links = ["Blog", "Resume", "Contact"];
 	return (
-		<Box style={{ position: 'sticky', top: '0', zIndex: 100 }}>
+		<Box style={{ position: 'sticky', top: 0, zIndex: 100 }}>
 			<Flex
 				bg={useColorModeValue("white", "gray.800")}
 				color={useColorModeValue("gray.600", "white")}

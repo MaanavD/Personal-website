@@ -25,7 +25,7 @@ export default function Projects() {
                     whileInView={{ y: 0, opacity: 1 }}
                     viewport={{ once: true }}>
                     <Box maxW='sm' marginBottom={['2em', '2em', 0]}>
-                        <Image rounded="lg" maxW="sm" justifySelf='auto' objectFit='cover' src={inflightfulImage}/>
+                        <Image rounded="lg" maxW="sm" justifySelf='auto' objectFit='cover' src={inflightfulImage} alt="inflightful logo"/>
                         <Text fontSize="xl" >inFlightful</Text>
                         <Stack direction='row'>
                             <Badge fontSize="0.8em" colorScheme='yellow'>JavaScript</Badge>
@@ -43,7 +43,7 @@ export default function Projects() {
                     whileInView={{ y: 0, opacity: 1 }}
                     viewport={{ once: true }}>
                     <Box maxW='sm' marginBottom={['2em', '2em', 0]}>
-                        <Image rounded="lg" justifySelf='auto' objectFit='cover' src={employmintImage}/>
+                        <Image rounded="lg" justifySelf='auto' objectFit='cover' src={employmintImage} alt="employmint logo"/>
                         <Text fontSize="xl" >Employmint</Text>
                         <Stack direction='row'>
                             <Badge colorScheme='yellow' variant='outline'><FaTrophy style={{ marginTop: '3px' }} /></Badge>
@@ -62,7 +62,7 @@ export default function Projects() {
                     whileInView={{ y: 0, opacity: 1 }}
                     viewport={{ once: true }}>
                     <Box maxW='sm' marginBottom={['2em', '2em', 0]}>
-                        <Image rounded="lg" objectFit='cover' src={microscanImage}  />
+                        <Image rounded="lg" objectFit='cover' src={microscanImage} alt="microscan logo"/>
                         <Text fontSize="xl" >MicroScan</Text>
                         <Stack direction='row'>
                             <Badge colorScheme='yellow' variant='outline'><FaTrophy style={{ marginTop: '3px' }} /></Badge>
