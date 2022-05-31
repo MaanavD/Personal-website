@@ -5,27 +5,20 @@ import {
 	IconButton,
 	Stack,
 	Collapse,
-	Icon,
 	Link,
-	Popover,
-	PopoverTrigger,
-	PopoverContent,
 	useColorMode,
 	useColorModeValue,
 	useDisclosure,
 	Center,
 	HStack,
-	Button,
 } from "@chakra-ui/react";
 import {
 	HamburgerIcon,
 	CloseIcon,
-	ChevronDownIcon,
-	ChevronRightIcon,
 	SunIcon,
 	MoonIcon,
 } from "@chakra-ui/icons";
-import React, { ReactNode } from "react";
+import React from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 

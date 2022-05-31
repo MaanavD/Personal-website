@@ -93,7 +93,7 @@ export default function Home({ posts }) {
 						viewport={{ once: true }}>
 						<Link href={`/posts/${slug}`}>
 							{bannerImage ? <Image src={bannerImage} alt={imageAlt} width="800px" height="600px" rounded="xl" /> : 
-								<Image src={placeholder} alt={imageAlt} width="1920px" height="1080px" rounded="xl" />
+								<Image src={placeholder} alt={imageAlt} width="1500px" height="1000px" rounded="xl" />
 							}
 						</Link>
 						<VStack spacing={-1}>
