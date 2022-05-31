@@ -67,7 +67,7 @@ export default function Navbar() {
 				>
 					<HStack as={"nav"} spacing={4} display={{ base: "none", md: "flex" }}>
 						{Links.map((link) => (
-							<DesktopNav href={`/${link}`} key={link}>{link}</DesktopNav>
+							<DesktopNav key={`desktop-${link}`}>{link}</DesktopNav>
 						))}
 					</HStack>
 				</Flex>
@@ -130,7 +130,7 @@ export default function Navbar() {
 					borderColor={useColorModeValue("gray.200", "gray.900")}
 				>
 					{Links.map((link) => (
-						<MobileNav href={`/${link}`} key={link}>{link}</MobileNav>
+						<MobileNav key={`mobile-${link}`}>{link}</MobileNav>
 					))}
 				</Stack>
 			</Collapse>
@@ -152,6 +152,7 @@ const DesktopNav = ({ children }) => {
 			}}
 			onClick={handleClick}
 			borderRadius="8px"
+			href={`/${children}`}
 		>
 			<Text fontWeight={600} color={useColorModeValue("gray.600", "gray.200")}>
 				{children}
@@ -181,6 +182,7 @@ const MobileNav = ({ children }) => {
 					bg: useColorModeValue("gray.200", "gray.700"),
 				}}
 				borderRadius="8px"
+				href={`/${children}`}
 			>
 				<Text
 					fontWeight={600}
