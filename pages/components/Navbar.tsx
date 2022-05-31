@@ -89,17 +89,17 @@ export default function Navbar() {
 							<Image
 								src={colorMode === 'dark' ? "/LogoWhite.svg" : "/LogoBlack.svg"}
 								alt="Maanav Dalal logo"
-								width="40rem"
-								height="40rem"
+								width="40px"
+								height="40px"
 							/>
 							&nbsp; Dalal &nbsp;
 						</Center>
 						<Box display={["flex", "flex", "none"]}>
 							<Image
 								src={colorMode === 'dark' ? "/LogoWhite.svg" : "/LogoBlack.svg"}
-								alt="Colour mode logo"
-								width="40rem"
-								height="40rem"
+								alt="Maanav Dalal logo - mobile"
+								width="40px"
+								height="40px"
 							/>
 						</Box>
 					</Link>
