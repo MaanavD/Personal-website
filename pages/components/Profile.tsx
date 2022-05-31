@@ -1,7 +1,12 @@
-import { Flex, useColorModeValue, Box, Icon, Image, chakra } from "@chakra-ui/react";
+import { Flex, useColorModeValue, Box, Icon, chakra } from "@chakra-ui/react";
 import { FiCoffee } from "react-icons/fi"
 import { FaLocationArrow, FaBriefcase, FaEnvelope } from "react-icons/fa"
+import NextImage from 'next/image';
+import profile from "/public/images/profile.jpg"
 
+const Image = chakra(NextImage, {
+	shouldForwardProp: (prop) => ['width', 'height', 'src', 'alt', 'layout'].includes(prop)
+})
 export default function Profile() {
     return (
         <Box
@@ -11,16 +16,11 @@ export default function Profile() {
             maxW="sm"
         >
             <Image
-                w="full"
-                h={56}
-                fit="cover"
-                objectPosition="center"
-                src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
-                alt="avatar"
+                src={profile}
+                alt="Maanav Dalal"
                 roundedTop={"lg"}
             />
-
-            <Flex alignItems="center" px={6} py={3} bg={useColorModeValue("blue.500", "gray.600")}>
+            <Flex alignItems="center" px={6} py={3} mt={-1.5} bg={useColorModeValue("blue.500", "gray.600")}>
                 <Icon as={FiCoffee} h={6} w={6} color={"white"} />
                 <chakra.h1 mx={3} color={"white"}  fontWeight="bold" fontSize="lg">
                     Drinking coffee

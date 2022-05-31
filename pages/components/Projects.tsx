@@ -3,6 +3,9 @@ import { Text, Link, Badge, Flex, Box, Center, Stack, Button, ButtonGroup, Headi
 import NextImage from 'next/image'
 import { FaTrophy } from 'react-icons/fa'
 import { AnimatePresence, motion } from "framer-motion"
+import employmintImage from "/public/images/projects/employmint.jpg"
+import inflightfulImage from "/public/images/projects/inflightful.jpg"
+import microscanImage from "/public/images/projects/microscan.jpg"
 
 const Image = chakra(NextImage, {
     shouldForwardProp: (prop) => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -22,7 +25,7 @@ export default function Projects() {
                     whileInView={{ y: 0, opacity: 1 }}
                     viewport={{ once: true }}>
                     <Box maxW='sm' marginBottom={['2em', '2em', 0]}>
-                        <Image rounded="lg" maxW="sm" justifySelf='auto' objectFit='cover' src={"https://source.unsplash.com/collection/404339/800x600"} width="400px" height="400px" />
+                        <Image rounded="lg" maxW="sm" justifySelf='auto' objectFit='cover' src={inflightfulImage}/>
                         <Text fontSize="xl" >inFlightful</Text>
                         <Stack direction='row'>
                             <Badge fontSize="0.8em" colorScheme='yellow'>JavaScript</Badge>
@@ -40,7 +43,7 @@ export default function Projects() {
                     whileInView={{ y: 0, opacity: 1 }}
                     viewport={{ once: true }}>
                     <Box maxW='sm' marginBottom={['2em', '2em', 0]}>
-                        <Image rounded="lg" justifySelf='auto' objectFit='cover' src={"https://source.unsplash.com/collection/404339/800x600"} width="400px" height="400px" />
+                        <Image rounded="lg" justifySelf='auto' objectFit='cover' src={employmintImage}/>
                         <Text fontSize="xl" >Employmint</Text>
                         <Stack direction='row'>
                             <Badge colorScheme='yellow' variant='outline'><FaTrophy style={{ marginTop: '3px' }} /></Badge>
@@ -59,7 +62,7 @@ export default function Projects() {
                     whileInView={{ y: 0, opacity: 1 }}
                     viewport={{ once: true }}>
                     <Box maxW='sm' marginBottom={['2em', '2em', 0]}>
-                        <Image rounded="lg" justifySelf='auto' objectFit='cover' src={"https://source.unsplash.com/collection/404339/800x600"} width="400px" height="400px" />
+                        <Image rounded="lg" objectFit='cover' src={microscanImage}  />
                         <Text fontSize="xl" >MicroScan</Text>
                         <Stack direction='row'>
                             <Badge colorScheme='yellow' variant='outline'><FaTrophy style={{ marginTop: '3px' }} /></Badge>

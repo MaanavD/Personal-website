@@ -64,12 +64,12 @@ const Achievements = () => {
             organization: "DECA Ontario",
             body: "Over 4 years, I recieved 2 plaques and over 7 medals for exams and case studies in the category of Business Services Marketing."
         },
-        {
-            title: "Regional Champion",
-            date: "Nov 2018",
-            organization: "DECA Ontario",
-            body: "Over 4 years, I recieved 2 top-2 medals alongside 5 ribbons in recognition for my perfomance in both case studies and exams."
-        },
+        // {
+        //     title: "Regional Champion",
+        //     date: "Nov 2018",
+        //     organization: "DECA Ontario",
+        //     body: "Over 4 years, I recieved 2 top-2 medals alongside 5 ribbons in recognition for my perfomance in both case studies and exams."
+        // },
         {
             title: "MDCC Finalist",
             date: "Nov 2019",
@@ -97,7 +97,7 @@ const Achievements = () => {
                     {sortedAwards.map((award, i) => {
                         const transition = {
                             ease: "easeIn",
-                            duration: i * 0.15
+                            duration: i > 10 ? 1.5 : i * 0.15
                         }
                         return (<motion.article key={award.title}
                             initial={{ y: 10, opacity: 0 }}

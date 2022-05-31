@@ -94,8 +94,7 @@ export default function Navbar() {
 						>
 							&nbsp; Maanav &nbsp;
 							<Image
-								// TODO: Replace png -> SVG
-								src={colorMode === 'dark' ? "/Logo.png" : "/BLogo.png"}
+								src={colorMode === 'dark' ? "/LogoWhite.svg" : "/LogoBlack.svg"}
 								alt="Maanav Dalal logo"
 								width="40rem"
 								height="40rem"
@@ -104,7 +103,7 @@ export default function Navbar() {
 						</Center>
 						<Box display={["flex", "flex", "none"]}>
 							<Image
-								src={colorMode === 'dark' ? "/Logo.png" : "/BLogo.png"}
+								src={colorMode === 'dark' ? "/LogoWhite.svg" : "/LogoBlack.svg"}
 								alt="Colour mode logo"
 								width="40rem"
 								height="40rem"

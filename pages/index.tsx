@@ -1,6 +1,6 @@
 import Head from "next/head";
 import NextLink from "next/link"
-import { Container, Flex, Box, Stack, Button, Link, ButtonGroup, Heading, chakra, Center, VStack, useColorModeValue } from "@chakra-ui/react";
+import { Container, Flex, Box, Stack, Button, Link, ButtonGroup, Heading, chakra, Center, VStack, useColorModeValue, Skeleton } from "@chakra-ui/react";
 import { CalendarIcon, EditIcon } from '@chakra-ui/icons'
 import styles from "../styles/Home.module.css";
 import NextImage from 'next/image'
@@ -13,6 +13,7 @@ import ModDivider from "./components/ModDivider";
 import fs from 'fs';
 import matter from 'gray-matter';
 import { motion } from "framer-motion";
+import placeholder from "/public/images/placeholder.jpg"
 
 const Image = chakra(NextImage, {
 	shouldForwardProp: (prop) => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -91,7 +92,9 @@ export default function Home({ posts }) {
 						whileInView={{ y: 0, opacity: 1 }}
 						viewport={{ once: true }}>
 						<Link href={`/posts/${slug}`}>
-							<Image src={bannerImage} alt={imageAlt} width="800px" height="600px" rounded="xl" />
+							{bannerImage ? <Image src={bannerImage} alt={imageAlt} width="800px" height="600px" rounded="xl" /> : 
+								<Image src={placeholder} alt={imageAlt} width="800px" height="600px" rounded="xl" />
+							}
 						</Link>
 						<VStack spacing={-1}>
 							<Link href={`/posts/${slug}`}>

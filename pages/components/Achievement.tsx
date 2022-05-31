@@ -7,6 +7,7 @@ const Achievement = (props) => {
         <Box
             w="full"
             maxW="sm"
+            h="full"
             px={4}
             py={3}
             bg={useColorModeValue("gray.100", "gray.700")}
