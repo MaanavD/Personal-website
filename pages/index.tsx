@@ -1,19 +1,16 @@
-import Head from "next/head";
 import NextLink from "next/link"
-import { Container, Flex, Box, Stack, Button, Link, ButtonGroup, Heading, chakra, Center, VStack, useColorModeValue, Skeleton } from "@chakra-ui/react";
+import { Container, Flex, Box, Stack, Button, Link, ButtonGroup, Heading, chakra, VStack, useColorModeValue } from "@chakra-ui/react";
 import { CalendarIcon, EditIcon } from '@chakra-ui/icons'
-import styles from "../styles/Home.module.css";
 import NextImage from 'next/image'
 import React from "react";
 import Projects from './components/Projects'
 import Achievements from './components/Achievements'
-import Contact from './Contact'
 import Footer from './components/Footer'
 import ModDivider from "./components/ModDivider";
 import fs from 'fs';
 import matter from 'gray-matter';
 import { motion } from "framer-motion";
-import placeholder from "/public/images/placeholder.jpg"
+import placeholder from "/public/images/placeholder.webp"
 
 const Image = chakra(NextImage, {
 	shouldForwardProp: (prop) => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -91,8 +88,8 @@ export default function Home({ posts }) {
 						whileInView={{ y: 0, opacity: 1 }}
 						viewport={{ once: true }}>
 						<Link href={`/posts/${slug}`}>
-							{bannerImage ? <Image src={bannerImage} alt={imageAlt == "" ? "Blog post image" : imageAlt} width="800px" height="600px" rounded="xl" /> : 
-								<Image src={placeholder} alt={imageAlt == "" ? "Blog post image" : imageAlt} width="1500px" height="1000px" rounded="xl" />
+							{bannerImage ? <Image placeholder="blur" src={bannerImage} alt={imageAlt == "" ? "Blog post image" : imageAlt} width="750px" height="500px" rounded="xl" /> :
+								<Image placeholder="blur" src={placeholder} alt={imageAlt == "" ? "Blog post image" : imageAlt} width="750px" height="500px" rounded="xl" />
 							}
 						</Link>
 						<VStack spacing={-1}>
@@ -141,10 +138,12 @@ export async function getStaticProps() {
 		};
 	});
 
+	const sortedPosts = posts.sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime());
+
 	// Return the pages static props
 	return {
 		props: {
-			posts,
+			posts: sortedPosts,
 		},
 	};
 }

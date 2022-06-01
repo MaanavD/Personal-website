@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, useColorModeValue, Link, Grid, transition } from "@chakra-ui/react";
+import { Text, useColorModeValue, Link, Grid } from "@chakra-ui/react";
 import Achievement from './Achievement';
 import { AnimatePresence, motion } from 'framer-motion';
 const Achievements = () => {

@@ -1,10 +1,14 @@
 import fs from "fs";
 import matter from "gray-matter";
-import { Container, Heading, Image, chakra, Stack, Badge, Divider } from '@chakra-ui/react'
+import { Container, Heading, chakra, Stack, Badge, Divider } from '@chakra-ui/react'
 import ReactMarkdown from 'react-markdown'
 import ChakraUIRenderer from 'chakra-ui-markdown-renderer';
 import { format } from 'date-fns'
-import Footer from "../components/Footer";
+import NextImage from "next/image"
+
+const Image = chakra(NextImage, {
+	shouldForwardProp: (prop) => ['width', 'height', 'src', 'alt'].includes(prop)
+})
 
 // The page for each post
 export default function Post({ frontmatter, content }) {
@@ -12,7 +16,7 @@ export default function Post({ frontmatter, content }) {
   const { title, summary, date, bannerImage, imageAlt, tags } = frontmatter
   const processedDate = format(new Date(date), "MMMM do, yyyy",)
   return <Container maxW="container.md" padding="10">
-    <Image src={bannerImage} alt={imageAlt} />
+    <Image rounded="lg" placeholder="blur" width="900px" height="600px" src={bannerImage} alt={imageAlt} />
     <Stack direction='row' py={2}>
       {tags?.map((tag) =>
         <Badge key={tag} variant='outline' colorScheme={"blue"}>

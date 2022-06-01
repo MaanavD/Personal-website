@@ -2,10 +2,10 @@ import { Flex, useColorModeValue, Box, Icon, chakra } from "@chakra-ui/react";
 import { FiCoffee } from "react-icons/fi"
 import { FaLocationArrow, FaBriefcase, FaEnvelope } from "react-icons/fa"
 import NextImage from 'next/image';
-import profile from "/public/images/profile.jpg"
+import profile from "/public/images/profile.webp"
 
 const Image = chakra(NextImage, {
-	shouldForwardProp: (prop) => ['width', 'height', 'src', 'alt', 'layout'].includes(prop)
+    shouldForwardProp: (prop) => ['width', 'height', 'src', 'alt', 'layout'].includes(prop)
 })
 export default function Profile() {
     return (
@@ -22,7 +22,7 @@ export default function Profile() {
             />
             <Flex alignItems="center" px={6} py={3} mt={-1.5} bg={useColorModeValue("blue.500", "gray.600")}>
                 <Icon as={FiCoffee} h={6} w={6} color={"white"} />
-                <chakra.h1 mx={3} color={"white"}  fontWeight="bold" fontSize="lg">
+                <chakra.h1 mx={3} color={"white"} fontWeight="bold" fontSize="lg">
                     Drinking coffee
                 </chakra.h1>
             </Flex>

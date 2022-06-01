@@ -4,7 +4,6 @@ import {
     Box,
     chakra,
     Flex,
-    Image,
     Link,
     Skeleton,
     Stack,
@@ -15,6 +14,11 @@ import {
 import { stopAnimation } from 'framer-motion/types/render/utils/animation';
 import * as React from 'react'
 import { FaGratipay } from 'react-icons/fa';
+import NextImage from "next/image"
+
+const Image = chakra(NextImage, {
+	shouldForwardProp: (prop) => ['width', 'height', 'src', 'alt'].includes(prop)
+})
 
 interface blogProp {
     bannerImage: string;
@@ -29,7 +33,7 @@ interface blogProp {
 export default function BlogPostDisplay(props: blogProp) {
     return (
         <Flex
-        p={[1, 1, 5]}
+            p={[1, 1, 5]}
             w="full"
             alignItems="center"
             justifyContent="center"
@@ -42,9 +46,9 @@ export default function BlogPostDisplay(props: blogProp) {
             >
                 {props.bannerImage && <Image
                     roundedTop="lg"
-                    w="full"
-                    h={64}
-                    fit="cover"
+                    placeholder="blur"
+                    width="390px"
+                    height="260px"
                     src={props.bannerImage}
                     alt={props.imageAlt}
                 />}
