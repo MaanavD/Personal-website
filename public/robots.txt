@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://maanavdalal.com
+
+# Sitemaps
+Sitemap: https://maanavdalal.com/sitemap.xml
