@@ -19,7 +19,7 @@ export default function Post({ frontmatter, content }) {
   return <>
   <NextSeo title={title} description={summary}/>
   <Container maxW="container.md" padding="10">
-    <Image rounded="lg" placeholder="blur" width="900px" height="600px" src={bannerImage} alt={imageAlt} />
+    <Image rounded="lg" placeholder="blur" width="800px" height="600px" src={bannerImage} alt={imageAlt} />
     <Stack direction='row' py={2}>
       {tags?.map((tag) =>
         <Badge key={tag} variant='outline' colorScheme={"blue"}>

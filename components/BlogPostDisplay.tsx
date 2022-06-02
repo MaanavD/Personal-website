@@ -1,14 +1,10 @@
 import {
-    AspectRatio,
     Badge,
     Box,
     chakra,
     Flex,
     Link,
-    Skeleton,
     Stack,
-    Text,
-    useBreakpointValue,
     useColorModeValue,
 } from '@chakra-ui/react'
 import { stopAnimation } from 'framer-motion/types/render/utils/animation';
@@ -47,8 +43,8 @@ export default function BlogPostDisplay(props: blogProp) {
                 {props.bannerImage && <Image
                     roundedTop="lg"
                     placeholder="blur"
-                    width="390px"
-                    height="260px"
+                    width="400px"
+                    height="300px"
                     src={props.bannerImage}
                     alt={props.imageAlt}
                 />}

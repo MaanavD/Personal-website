@@ -2,7 +2,7 @@
 title: "An Uncharted Walk"
 author: "Maanav Dalal"
 date: "05/12/2022"
-summary: "A fun walk into a place filled with graffiti"
+summary: "A fun walk into a place filled with graffiti."
 bannerImage: "/postImages/may12.HEIC.webp"
 imageAlt: "Alcorocon Mural"
 tags:
@@ -10,7 +10,7 @@ tags:
     - Madrid
 ---
 
-### Graffiti
+## Graffiti
 I decided to go for a long walk in the scorching heat today because I didn't just want to stay at home the entire time. I wanted to listen to something but there wasn't much music I really wanted to listen to, so I spent an hour-ish trying to figure out how to download the hobbit as an audiobook without torrenting it. I guess people use Telegram for that kinda thing, but it worked and after downloading the book I was off
 
 While walking, I found some interesting structures that looked like roofs, but didn't really understand their purpose, I had no idea why people would make stuff like that. 

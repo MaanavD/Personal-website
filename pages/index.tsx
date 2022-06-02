@@ -91,8 +91,8 @@ export default function Home({ posts }) {
 							whileInView={{ y: 0, opacity: 1 }}
 							viewport={{ once: true }}>
 							<Link href={`/posts/${slug}`}>
-								{bannerImage ? <Image placeholder="blur" src={bannerImage} alt={imageAlt == "" ? "Blog post image" : imageAlt} width="750px" height="500px" rounded="xl" /> :
-									<Image placeholder="blur" src={placeholder} alt={imageAlt == "" ? "Blog post image" : imageAlt} width="750px" height="500px" rounded="xl" />
+								{bannerImage ? <Image placeholder="blur" src={bannerImage} alt={imageAlt == "" ? "Blog post image" : imageAlt} width="800px" height="600px" rounded="xl" /> :
+									<Image placeholder="blur" src={placeholder} alt={imageAlt == "" ? "Blog post image" : imageAlt} width="800px" height="600px" rounded="xl" />
 								}
 							</Link>
 							<VStack spacing={-1}>
