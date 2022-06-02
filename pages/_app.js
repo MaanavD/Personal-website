@@ -6,7 +6,7 @@ import Router from "next/router";
 import Link from "next/link";
 import Head from "next/head";
 import NProgress from "nprogress";
-import Navbar from "./components/Navbar";
+import Navbar from "../components/Navbar";
 import { DefaultSeo } from "next-seo";
 
 Router.events.on("routeChangeStart", (url) => {

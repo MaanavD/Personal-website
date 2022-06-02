@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://maanavdalal.com</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-02T15:24:09.264Z</lastmod></url>
-<url><loc>https://maanavdalal.com/Blog</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-02T15:24:09.264Z</lastmod></url>
-<url><loc>https://maanavdalal.com/Contact</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-02T15:24:09.264Z</lastmod></url>
-<url><loc>https://maanavdalal.com/Resume</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-02T15:24:09.264Z</lastmod></url>
-<url><loc>https://maanavdalal.com/components/Achievement</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-02T15:24:09.264Z</lastmod></url>
-<url><loc>https://maanavdalal.com/components/Achievements</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-02T15:24:09.264Z</lastmod></url>
-<url><loc>https://maanavdalal.com/components/BlogPostDisplay</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-02T15:24:09.264Z</lastmod></url>
-<url><loc>https://maanavdalal.com/components/Footer</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-02T15:24:09.264Z</lastmod></url>
-<url><loc>https://maanavdalal.com/components/ModDivider</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-02T15:24:09.264Z</lastmod></url>
-<url><loc>https://maanavdalal.com/components/Navbar</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-02T15:24:09.264Z</lastmod></url>
-<url><loc>https://maanavdalal.com/components/Profile</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-02T15:24:09.264Z</lastmod></url>
-<url><loc>https://maanavdalal.com/components/Projects</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-02T15:24:09.264Z</lastmod></url>
-<url><loc>https://maanavdalal.com/posts/may_11</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-02T15:24:09.264Z</lastmod></url>
-<url><loc>https://maanavdalal.com/posts/may_12</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-02T15:24:09.264Z</lastmod></url>
+<url><loc>https://maanavdalal.com</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-02T15:28:26.273Z</lastmod></url>
+<url><loc>https://maanavdalal.com/Blog</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-02T15:28:26.273Z</lastmod></url>
+<url><loc>https://maanavdalal.com/Contact</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-02T15:28:26.273Z</lastmod></url>
+<url><loc>https://maanavdalal.com/Resume</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-02T15:28:26.273Z</lastmod></url>
+<url><loc>https://maanavdalal.com/posts/may_11</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-02T15:28:26.273Z</lastmod></url>
+<url><loc>https://maanavdalal.com/posts/may_12</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-02T15:28:26.273Z</lastmod></url>
 </urlset>

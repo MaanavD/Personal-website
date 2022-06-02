@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text, Button, Container, Grid, HStack } from "@chakra-ui/react";
 import { FaEnvelope, FaGithub, FaInstagram, FaLinkedinIn, FaSpotify } from 'react-icons/fa';
-import Profile from './components/Profile';
+import Profile from '../components/Profile';
 import { AnimatePresence, motion } from 'framer-motion';
 import { NextSeo } from 'next-seo';
 

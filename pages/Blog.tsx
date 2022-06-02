@@ -4,7 +4,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 // import NextImage from 'next/image';
 import Link from 'next/link';
-import BlogPostDisplay from './components/BlogPostDisplay'
+import BlogPostDisplay from '../components/BlogPostDisplay'
 import { NextSeo } from 'next-seo';
 
 // const Image = chakra(NextImage, {

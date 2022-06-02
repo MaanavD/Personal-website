@@ -3,10 +3,10 @@ import { Container, Flex, Box, Stack, Button, Link, ButtonGroup, Heading, chakra
 import { CalendarIcon, EditIcon } from '@chakra-ui/icons'
 import NextImage from 'next/image'
 import React from "react";
-import Projects from './components/Projects'
-import Achievements from './components/Achievements'
-import Footer from './components/Footer'
-import ModDivider from "./components/ModDivider";
+import Projects from '../components/Projects'
+import Achievements from '../components/Achievements'
+import Footer from '../components/Footer'
+import ModDivider from "../components/ModDivider";
 import fs from 'fs';
 import matter from 'gray-matter';
 import { motion } from "framer-motion";
