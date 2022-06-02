@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown'
 import ChakraUIRenderer from 'chakra-ui-markdown-renderer';
 import { format } from 'date-fns'
 import NextImage from "next/image"
+import { NextSeo } from "next-seo";
 
 const Image = chakra(NextImage, {
 	shouldForwardProp: (prop) => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -15,7 +16,9 @@ export default function Post({ frontmatter, content }) {
 
   const { title, summary, date, bannerImage, imageAlt, tags } = frontmatter
   const processedDate = format(new Date(date), "MMMM do, yyyy",)
-  return <Container maxW="container.md" padding="10">
+  return <>
+  <NextSeo title={title} description={summary}/>
+  <Container maxW="container.md" padding="10">
     <Image rounded="lg" placeholder="blur" width="900px" height="600px" src={bannerImage} alt={imageAlt} />
     <Stack direction='row' py={2}>
       {tags?.map((tag) =>
@@ -29,6 +32,7 @@ export default function Post({ frontmatter, content }) {
     <Divider my={5} />
     <ReactMarkdown components={ChakraUIRenderer()}>{content}</ReactMarkdown>
   </Container>
+  </>
 }
 
 // Generating the paths for each post
