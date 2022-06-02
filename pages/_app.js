@@ -8,7 +8,6 @@ import Head from "next/head";
 import NProgress from "nprogress";
 import Navbar from "../components/Navbar";
 import { DefaultSeo } from "next-seo";
-import image from "../public/Web-Splash.png"
 
 Router.events.on("routeChangeStart", (url) => {
   console.log(`Loading: ${url}`);
@@ -32,7 +31,7 @@ function MyApp({ Component, pageProps }) {
             "Program Manager at Microsoft. Frontend developer and design enthusiast with a focus on user experience. Committed to growth both personally and professionally.",
           images: [
             {
-              content: {image},
+              url: "https://i.ibb.co/hyCwDWf/Web-Splash.png",
               width: 600,
               height: 600,
               alt: "Maanav Dalal",
