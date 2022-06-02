@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }) {
             "Program Manager at Microsoft. Frontend developer and design enthusiast with a focus on user experience. Committed to growth both personally and professionally.",
           images: [
             {
-              url: "https://i.ibb.co/hyCwDWf/Web-Splash.png",
+              url: "/public/Web-Splash.png",
               width: 600,
               height: 600,
               alt: "Maanav Dalal",
