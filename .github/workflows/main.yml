@@ -12,10 +12,10 @@ jobs:
     - uses: danhellem/github-actions-issue-to-work-item@master
       env:     
         ado_token: '${{ secrets.ADO_PERSONAL_ACCESS_TOKEN }}'
-        github_token: '${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}'
         ado_organization: 'maanavorg'
         ado_project: 'testboards' 
-        ado_new_state: 'New'
+        ado_new_state: 'Doing'
+        ado_wit: 'New Item' 
         ado_close_state: 'Closed'
         ado_active_state: 'Active'  
         ado_bypassrules: true
