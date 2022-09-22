@@ -24,4 +24,4 @@ jobs:
           format: list
           # query: 'label:"model: onnx" updated:$TODAY'
           query: 'updated:$TODAY'
-          token: ${{ github.token }}
+          token: ${{ secrets.G_TOKEN }}
