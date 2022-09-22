@@ -17,11 +17,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: List onnx issues updated today
+        id: issues
         uses: lee-dohm/select-matching-issues@v1
         with:
-          format: list
           # query: 'label:"model: onnx" updated:$TODAY'
           query: "updated:$(date +'%Y-%m-%d')"
           token: ${{ secrets.G_TOKEN }}
       - name: Echo issues
-        run: echo ${{ steps.bugs.outputs.path }}
+        run: echo ${{ steps.bugs.issues.path }}
