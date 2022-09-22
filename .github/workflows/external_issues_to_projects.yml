@@ -16,12 +16,10 @@ jobs:
     name: List open issues labeled "out-of-office"
     runs-on: ubuntu-latest
     steps:
-      - name: Set current date as env variable
-        run: echo "TODAY::$(date +'%Y-%m-%d')" >> $GITHUB_ENV
       - name: List onnx issues updated today
         uses: lee-dohm/select-matching-issues@v1
         with:
           format: list
           # query: 'label:"model: onnx" updated:$TODAY'
-          query: 'updated:$TODAY'
+          query: 'updated:$(date +'%Y-%m-%d')'
           token: ${{ secrets.G_TOKEN }}
