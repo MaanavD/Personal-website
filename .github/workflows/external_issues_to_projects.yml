@@ -23,3 +23,5 @@ jobs:
           # query: 'label:"model: onnx" updated:$TODAY'
           query: "updated:$(date +'%Y-%m-%d')"
           token: ${{ secrets.G_TOKEN }}
+      - name: Echo issues
+        run: echo ${{ steps.bugs.outputs.path }}
